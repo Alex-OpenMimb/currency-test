@@ -29,7 +29,14 @@ class CurrencyController extends Component
 
     public function calculate()
     {
-        
+
+        $this->validate([
+            'from_currency'         => 'bail|required|',
+            'to_currency'           => 'bail|required|',
+            'value'                 => 'bail|required|',
+        ]
+    );
+       
         $response = $this->conectApi($this->from_currency);
 
         

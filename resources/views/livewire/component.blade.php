@@ -143,7 +143,7 @@
                 </div>
 
            
-    
+                @include('livewire.alerts')
            
         </div>
     </div>
