@@ -49,17 +49,24 @@ class CurrencyController extends Component
         $taza = $array[$this->to_currency];
 
         $this->result = $this->value * $taza ;
+
+        // $this->handleReset();
         
     }
 
     public function conectApi($i)
     {
      
-        $base = 'https://api.exchangerate-api.com/v4/latest/USD';
+        $base = 'https://api.exchangerate-api.com/v4/latest/';
         $url = $base.$i;
         $header = ['Content-Type : application/json'];
         $curl = HelperCurl::get($url,$header);
 
         return $curl;
+    }
+    public function handleReset()
+    {
+        $this->from_currency = '';
+        $this->to_currency   = '';
     }
 }

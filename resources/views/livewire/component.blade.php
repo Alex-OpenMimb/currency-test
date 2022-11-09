@@ -62,7 +62,7 @@
                     <option value="ZAR">ZAR</option>
     
                 </select>
-                <input type="number" id="cantidad-uno" placeholder="0"  value="0" wire:model="value">
+                <input type="number" id="cantidad-uno" placeholder="0"  value="0" wire:model.lazy="value">
     
             </div>
 
